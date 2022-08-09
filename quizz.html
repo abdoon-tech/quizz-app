@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SmartFluent</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <script src="https://kit.fontawesome.com/28496cff43.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+
+    <div id="wrapper">
+        <div id="questionbox">
+        </div>
+    </div>
+
+
+    <button id="button">Start Quiz</button>
+    <button id="button2">Add Question</button>
+
+
+
+
+    <div id="admin">
+        <div class="title">Log In</div>
+        <input id="username" placeholder="Email" type="text">
+        <input id="pass" placeholder="password" type="password">
+        <button id="admin-continue">Log In</button>
+        <em class="fas fa-times" id="close-admin"></em>
+    </div>
+
+
+    <div id="popup">
+        <div class="title">Create New question</div>
+        <input id="text-input" placeholder="question" type="text">
+        <input id="a1" placeholder="Answer1" type="text">
+        <input id="a2" placeholder="Answer1" type="text">
+        <input id="a3" placeholder="Answer1" type="text">
+        <input id="correct" placeholder="correct" type="text">
+        <button id="continue">Done</button>
+        <em class="fas fa-times" id="close"></em>
+    </div>
+
+
+
+
+   
+
+
+
+
+
+    <!--js files here-->
+    <!-- The core Firebase JS SDK is always required and must be listed first -->
+    <script src="https://www.gstatic.com/firebasejs/8.3.2/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.3.2/firebase-database.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.3.2/firebase-auth.js"></script>
+
+    <!-- TODO: Add SDKs for Firebase products that you want to use
+        https://firebase.google.com/docs/web/setup#available-libraries -->
+    <script src="https://www.gstatic.com/firebasejs/8.3.2/firebase-analytics.js"></script>
+
+    <script>
+        // Your web app's Firebase configuration
+        // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+        var firebaseConfig = {
+            apiKey: "AIzaSyA-DRk1jvAJ8yzytBVf9VKpeEfesnO2CEI",
+            authDomain: "quiz-web-app-96a36.firebaseapp.com",
+            projectId: "quiz-web-app-96a36",
+            storageBucket: "quiz-web-app-96a36.appspot.com",
+            messagingSenderId: "296061848690",
+            appId: "1:296061848690:web:dda795307fb04403d4c6eb",
+            measurementId: "G-1ZC8D88LNH"
+        };
+        // Initialize Firebase
+        firebase.initializeApp(firebaseConfig);
+        firebase.analytics();
+    </script>
+
+    <script src="quizz.js"></script>
+</body>
+
+</html>
