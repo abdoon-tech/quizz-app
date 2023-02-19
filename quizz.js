@@ -10,12 +10,14 @@ var Done = document.getElementById("continue");
 var closepopup = document.getElementById("close")
 var admin = document.getElementById("admin");
 var closeAdminpPopup = document.getElementById("close-admin")
+var controller=document.querySelector(".controller")
 
 
 data.child("quiz").once("value", getquestion)
 
 startquiz.addEventListener("click", function() {
     questionbox.style.display = "block";
+    controller.style.display="none"
     data.child("sentence-structure").once("value", getquestion)
 })
 
@@ -103,6 +105,7 @@ function renderquestion(question, choiceA, choiceB, choiceC) {
     var closequiz = document.getElementById("closequiz");
     closequiz.onclick = function() {
         questionbox.style.display = "none";
+        controller.style.display="flex"
     }
 }
 
